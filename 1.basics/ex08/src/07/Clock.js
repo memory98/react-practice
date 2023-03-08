@@ -21,7 +21,7 @@ function Clock(props) {
         __html: htmls
      }
     
-    return (
+    return ( 
         //
         // HTML 태그를 동적으로 생성하는 JSX Element의 특정 속성(dangeruouslySetInnerHTML)으로 렌더링 하는 작업은 금하고 있지만 
         // XSS(Cross-Site-Scripting) 보호기능을 끄고 사용할 수 있다.
