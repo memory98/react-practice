@@ -1,0 +1,17 @@
+{
+  "name": "ex04",
+  "version": "1.0.0",
+  "description": "1. Babel Plugin: 변환 규칙\r 1) 설치\r     $ npm i -D @babel/core @babel/cli\r 2) 플러그인 적용\r     - 블록 스코프 변수 플러그인(@babel/plugin-transform-block-scoping)\r         $ npm i -D @babel/plugin-transform-block-scoping\r         $ npx babel src/index.js -o dist/index.js --plugins @babel/plugin-transform-block-scoping",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2"
+  }
+}
