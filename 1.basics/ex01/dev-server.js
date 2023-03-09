@@ -11,6 +11,6 @@ http
         console.log('http server running on ' + port);
     })
     .on('error', function(error){
-        console.log(error)
+        console.error(error);
     })
-    .listen(port);
+    .listen(port); 

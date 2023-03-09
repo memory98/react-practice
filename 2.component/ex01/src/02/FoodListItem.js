@@ -1,8 +1,8 @@
 import React from 'react';
 
-function FoodListItem(props) {
+function FoodListItem({name, count}) {
     return (
-        <li>{props.name} : {props.count}</li>
+        <li>{name} : {count}</li>
     );
 }
 
