@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './assets/scss/Card.scss';
-const Card = ({no, title,description}) => {
+import TaskList from './TaskList';
+const Card = ({no, title, description, tasks}) => {
     return (
         <div>
             <div className={styles.Card}>
@@ -9,6 +10,7 @@ const Card = ({no, title,description}) => {
             <div className={styles.Card__Details}>
                 {description}
             </div>
+            <TaskList tasks={tasks}/>
         </div>
     );
 };
