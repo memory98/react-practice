@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './assets/css/Searchbar.css';
-const Searchbar = () => {
+const Searchbar = ({callback}) => {
+
     return (
         <div className={styles.Searchbar}>
-            <input type='text' placeholder='search'></input>
+            <input type='text' placeholder='search' onChange={e => callback(e.target.value)}></input>
         </div>
     );
 };

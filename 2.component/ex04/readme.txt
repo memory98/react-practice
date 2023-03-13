@@ -11,9 +11,11 @@ ex04 : Component -State
 
 
 02. 제어 컴포넌트
-    - 
+    - input, textarea, select, ... 같은 폼(form) 컴포넌트에서 사용자 입력에 따라 state 값이 변경되고 렌더링 컴포넌트
 
 03. 상태 컴포넌트 VS 순수(Pure, Dumb) 컴포넌트
+
+04. Data Flow(Bottom -> Top)
 
 ================================================
 1. 설치
