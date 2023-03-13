@@ -6,6 +6,7 @@ const Email = ({firstName, lastName, email}) => {
             {firstName}{lastName}
             <br/>
             {email}
+            <a href=""></a>
         </li>
     );
 };
