@@ -2,8 +2,13 @@ ex05 : Component - Lifecycle
 
 01. Class Component
     01) Lifecycle I : Mount
-
+        - 1. constructor
+        - 2. getDerivedStateFromProps
+        - 3. render ***
+        - 4. componentDidMount ***
     02) Lifecycle II : update
+        - 1. getDerivedStateFromProps
+        - 2. shouldComponentUpdate **
 
     03) Lifecycle III : Unmout
 
