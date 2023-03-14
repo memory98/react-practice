@@ -5,28 +5,51 @@ import Clock from './Clock';
 export default function App() {
     const [ticks, setTicks] = useState(1);
 
-    const date = new Date();
-    const [hours, setHours] = useState(date.getHours());
-    const [minutes, setMinutes] = useState(date.getMinutes());
-    const [seconds, setSeconds] = useState(date.getSeconds());
+    // const now = new Date();
+    // const hours = now.getHours();
+    // const minutes = now.getMinutes();
+    // const seconds = now.getSeconds();
+    const currentTime = {};
 
+    const getTime = (currentTime) => {
+        const hours = new Date().getHours();
+        const minutes =  new Date().getMinutes();
+        const seconds = new Date().getSeconds();
+
+        currentTime.hours = hours;
+        currentTime.minutes = minutes;
+        currentTime.seconds = seconds;
+
+        return currentTime;
+    }
+
+    const [state, setState] = useState(getTime(currentTime));
     useEffect(() => {
-        setInterval(function() {
-            // setTicks(ticks+1);
+        setInterval(() => {
+            setTicks(e => e+1);
+    
+            setState(getTime(currentTime));
         },1000);
-    });
+    },[]);
     return (
         <div>
-            <span>{ticks}</span>
+            <span
+                style={{
+                    display: "flex",
+                    fontSize: "100px",
+                    justifyContent: "center"
+                    
+                }}
+                >ticks : {ticks}</span>
             {
                 ticks % 10 === 0 ?
                 null : 
                 <Clock 
                     message={'ex05: useEffect Hook example'}
-                    hours={"10"}
-                    minutes={"02"}
-                    seconds={"50"}
-                    session={'am'}/>
+                    
+                    hours={('0'+(state.hours> 12 ? state.hours - 12 : state.hours)).slice(-2)}
+                    minutes={('0'+state.minutes).slice(-2)}
+                    seconds={('0'+state.seconds).slice(-2)}/>
             }
         </div>
             // <Clock
@@ -34,6 +57,5 @@ export default function App() {
             //     hours={state.hours}
             //     minutes={state.minutes}
             //     seconds={state.seconds}/>
-            
     );
 }

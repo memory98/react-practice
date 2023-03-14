@@ -8,6 +8,7 @@ export default function Form() {
         // validation codes.....
 
         console.log(e.target.email.value + ":" + e.target.password,value);
+        
         //ajax 로그인 
     }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './assets/css/Task.css';
-const Task = ({cardNo, no, name, done,callback}) => {
+const Task = ({no, cardNo, name, done,callback}) => {
     return (
         <li className={styles.TaskList__Task}>
             <input 
