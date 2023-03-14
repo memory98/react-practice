@@ -33,7 +33,6 @@ const KanbanBoard = () => {
                 title={'Done'}
                 cards={cards.filter(card => card.status === 'Done')}               
                 callback={changeTaskDone}/>
-
         </div>
     );
 };
