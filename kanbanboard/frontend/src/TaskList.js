@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Task from './Task';
-
-const TaskList = ({cardNo, tasks, callback}) => {
+import styles  from './assets/css/TaskList.css';
+const TaskList = ({cardNo,tasks, callbackAddTask}) => {
 
     return (
         <div>
@@ -13,9 +13,21 @@ const TaskList = ({cardNo, tasks, callback}) => {
                                     cardNo={cardNo}
                                     name={task.name}
                                     done={task.done}
-                                    callback={callback}/>)
+                                    />)
                 }
             </ul>
+            <input 
+                type='text' 
+                placeholder={'텍스트 추가'}
+                className={styles.TaskList__add_task}
+                onKeyDown={(e) => {
+                    if(e.key ==='Enter') {
+                        callbackAddTask(e.target.value);
+                        e.target.value='';
+                    }
+                }}
+                />
+                
         </div>
     );
 };
