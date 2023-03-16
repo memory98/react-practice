@@ -40,7 +40,7 @@ const App = () => {
             <div id={styles.App}>
                 <RegisterForm/>  
                 <Searchbar callback={notifykeyWordChanged}/>   
-                <Emaillist emails={emails}/>    
+                <Emaillist emails={emails} callback={notifykeyWordChanged}/>    
             </div>
         </div>
     );

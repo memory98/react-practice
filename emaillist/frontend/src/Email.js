@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-const Email = ({no,firstName, lastName, email}) => {
+const Email = ({no,firstName, lastName, email, notifykeyWordChanged}) => {
 
     const deleteEmail = async() => {
         try{
@@ -16,16 +16,21 @@ const Email = ({no,firstName, lastName, email}) => {
             if(!response.ok) {
                 throw new Error(`${response.status} ${response.statusText}`);
             }
-
             const json = await response.json();
             if(json.result !=='success') {
                 throw new Error(`${json.result} ${json.message}`);
             }
-            location.reload();
         } catch(err) {
             console.log(err.message);
         }
     }
+
+    const reloadEmail = () =>{
+
+    }
+    useEffect(() => {
+        notifykeyWordChanged('');
+    },[])
     return (
         <li>
             <p no={no} onClick={deleteEmail}>X</p>

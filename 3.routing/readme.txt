@@ -1,18 +1,14 @@
-ex05 : Component - Lifecycle
+react-practice - 3.routing
 
-01. Class Component
-    01) Lifecycle I : Mount
-        - 1. constructor
-        - 2. getDerivedStateFromProps
-        - 3. render ***
-        - 4. componentDidMount ***
-    02) Lifecycle II : update
-        - 1. getDerivedStateFromProps
-        - 2. shouldComponentUpdate **
+01. src/01: React Route Basic I: 간단한 방법(Hash)
+02. src/02: React Route Basic II: HTML5 history api
+03. src/03: React Route Basic III: HashRouter vs BrowserRouter
+04. src/04: React Route Basic IV: Link vs NavLink
+05. Styleing(Layout)
+06. Composition
+07. Nesting Routes
+08. useRoute
 
-    03) Lifecycle III : Unmout
-
-02. Functional Compoenent : Alternative(대체) - useEffect
 
 ================================================
 1. 설치

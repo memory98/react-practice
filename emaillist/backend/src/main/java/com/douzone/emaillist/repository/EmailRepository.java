@@ -18,6 +18,10 @@ public class EmailRepository {
 	public List<EmailVo> findAll() {
 		return sqlSession.selectList("email.findAll");
 	}
+	
+	public List<EmailVo> findKeyword() {
+		return sqlSession.selectList("email.findKeyword");
+	}
 
 	public Boolean insert(EmailVo emailVo) {
 		return sqlSession.insert("email.insert",emailVo) == 1;

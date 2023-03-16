@@ -8,6 +8,16 @@
 		]]>
 	</select>
 	
+	<select id="findKeyword" resultType="emailvo" parameterType="string">
+		<![CDATA[
+			select no, firstName, lastName, email
+			  from emaillist
+			 where firstName=#{keyword}
+			 	or lastName=#{keyword}
+			 	or email=#{keyword}
+		]]>
+	</select>
+	
 	<insert id="insert" parameterType="emailvo">
 		<![CDATA[
 			insert 
