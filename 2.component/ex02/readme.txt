@@ -23,6 +23,7 @@ ex02 : Component Styling
     - $ npm run debug src=06 css-modules=true
 
 7) React Modal
+    - $ npm i react-modal
 8) Modal : Material UI
 
 src/01 : Foodlist: 함수 컴포넌트
