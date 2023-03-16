@@ -10,4 +10,4 @@
 		
 	2) 배포 후 실행
 	
-		- java -Dspring.profiles.active=production -jar
+		- java -Dspring.profiles.active=production -jar kanbanboard.backend/target/kanbanboard

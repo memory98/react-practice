@@ -20,17 +20,14 @@ const Email = ({no,firstName, lastName, email, notifykeyWordChanged}) => {
             if(json.result !=='success') {
                 throw new Error(`${json.result} ${json.message}`);
             }
+            notifykeyWordChanged('');
+
         } catch(err) {
             console.log(err.message);
         }
-    }
-
-    const reloadEmail = () =>{
 
     }
-    useEffect(() => {
-        notifykeyWordChanged('');
-    },[])
+
     return (
         <li>
             <p no={no} onClick={deleteEmail}>X</p>

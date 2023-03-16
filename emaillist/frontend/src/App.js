@@ -31,7 +31,6 @@ const App = () => {
             console.log(err.message);
         }
     }
-
     useEffect(() => {
         notifykeyWordChanged('');
     },[])
@@ -40,7 +39,7 @@ const App = () => {
             <div id={styles.App}>
                 <RegisterForm/>  
                 <Searchbar callback={notifykeyWordChanged}/>   
-                <Emaillist emails={emails} callback={notifykeyWordChanged}/>    
+                <Emaillist emails={emails} notifykeyWordChanged={notifykeyWordChanged}/>    
             </div>
         </div>
     );

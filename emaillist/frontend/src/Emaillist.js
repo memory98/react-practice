@@ -3,6 +3,7 @@ import styles from './assets/css/Emaillist.css';
 import emails from './assets/json/data.json';
 import Email from './Email';
 const Emaillist = ({emails, notifykeyWordChanged}) => {
+    console.log(notifykeyWordChanged)
     return (
         <ul className={styles.Emaillist}>
             {
@@ -12,7 +13,7 @@ const Emaillist = ({emails, notifykeyWordChanged}) => {
                                         firstName={email.firstName}
                                         lastName={email.lastName}
                                         email={email.email}
-                                        callback={notifykeyWordChanged}/>)
+                                        notifykeyWordChanged={notifykeyWordChanged}/>)
 
             }
             </ul>
