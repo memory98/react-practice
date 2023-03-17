@@ -1,26 +1,27 @@
 const path = require('path');
 
-module.exports =  function(env){ 
+module.exports = function(env){
     return {
         mode: "none",
         entry: path.resolve(`src/index.js`),
         output: {
-            path: path.resolve('public'),
+            path: path.resolve('../backend/src/main/resources'),
+
             filename: 'assets/js/main.js',
             assetModuleFilename:'assets/images/[hash][ext]'
         },
         module: {
             rules:[{
                 test: /\.js$/i,
-                exclude: /node-modules/,
+                exclude: /node_modules/,
                 loader: 'babel-loader',
                 options: {
-                    configFile:path.resolve('config/babel.config.json')
+                    configFile: path.resolve('config/babel.config.json')
                 }
             },{
                 test: /\.(c|sa|sc)ss$/i,
                 use: [
-                    'style-loader', 
+                    'style-loader',
                     {
                         loader: 'css-loader',
                         options: {
@@ -33,7 +34,7 @@ module.exports =  function(env){
                 type: 'asset/resource'
             }]
         },
-        devtool: 'eval-source-map',
+        devtool: "eval-source-map",
         devServer: {
             host: '0.0.0.0',
             port: 9090,
