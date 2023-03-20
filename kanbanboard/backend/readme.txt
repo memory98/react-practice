@@ -19,7 +19,7 @@
 		# mv ~/.ssh/id_rsa.pub ~/.ssh/authorized_keys	
 	
 	4) 연결 테스트
-	    # ssh -i mykey.pem root@192.168.10.125
+	    # ssh -i mykey.pem root@192.168.10.111
 	 
 	5) ssh 연결 환경설정
 		- ~/.ssh/environment
